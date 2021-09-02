@@ -1,0 +1,199 @@
+
+GIT != GITHUB
+
+GIT
+
+	- GIT is a Distributed Version Control System.
+	- Helps software developers to work together.
+	- And maintains a complete history of work.
+	- Allow developers to work simultaneously.
+	- Does not allow overwritting each other's code.
+	
+GITHUB
+
+	- A portal or website where we can manage server repositories.
+	- Provides backups
+	- provides Visual Interface to your repositories
+	- makes the collaboration easier.
+	
+-----------------------------------------------------
+
+Types of Version Control System:
+
+	1. Distributed VCS
+	
+		Distributed VCS clients not only check out the latest snapshot but they also fully mirror the repositories. This VCS manages two repositories i.e., one at local and one at remote.
+	
+	2. Centralized VCS
+	
+		Centralized VCS uses a central server to store all files and enable team collaboration.
+		
+------------------------------------------------------
+
+GITHUB:
+
+	username: mgunwani
+	email: gunwani.madhu@gmail.com
+	password: ********************
+	
+-------------------------------------------------------
+
+Environment Setups:
+
+	git config --list
+	
+	git config --global user.name mgunwani
+	
+	git config --global user.email gunwani.madhu@gmail.com
+
+-------------------------------------------------------
+
+To use distributed VCS, follow below steps:
+
+1. To initialize a local repositories: (Only Once)
+
+	Go to the Application Folder and run below command.
+	
+	git init
+	
+2. To check status of tracked/untracked files and folders:
+
+	git status
+
+3. To track or stage the pending files to local repository:
+
+	git add .
+	
+4. To check status of tracked/untracked files and folders:
+
+	git status
+	
+5. To commit the tracked files and folders:
+
+	git commit -m "First Commit"
+
+6. Add Remote Origin for Server Repository: (Only Once)
+
+	git remote add origin https://github.com/mgunwani/git-sample-project.git
+	
+7. Push to Server Repository
+
+	git push -u origin master
+	
+------------------------------------------------------------------
+
+Git Branching and Merging:
+
+1. What are branches?
+2. How to create branch?
+3. How to checkout branch?
+4. How to merge branch to master?
+5. How to delete branch locally or remotely?
+
+
+1. To get the list of branches (Local Repository)
+
+	git branch 
+	git branch --list
+
+2. To get the list of branches (Remote Repository)
+
+	git branch -r
+	git branch --list --remote
+	
+3. To get the all branches (Local and Remote Repository)
+
+	git branch -a
+	git branch --list --all
+	
+4. Create New Branch:
+
+	git branch MyFirstBranch
+	
+5. Checkout to MyFirstBranch:
+
+	git checkout MyFirstBranch
+	
+6. Do Some Changes to your local repository and push changes to MyFirstBranch:
+
+	git status
+	
+	git add .
+	
+	git status
+	
+	git commit -m "First Commit to MyFirstBranch"
+	
+	git push -u origin MyFirstBranch
+
+----------------------------------------------------------
+
+Merging MyFirstBranch into Master Branch:
+
+1. Checkout to the destination or master branch:
+
+	git checkout master
+	
+2. Merge MyFirstBranch to master:
+
+	git merge MyFirstBranch
+	
+3. Push final changes to destination or master branch:
+
+	git push -u origin master
+	
+4. Verify by seeing the result says:
+
+	This branch is even with master.
+
+----------------------------------------------------------
+
+Deleting Branches locally or remotely:
+
+1. To delete branch from Local Repository:
+
+	git branch -d MyFirstBranch
+	
+2. To delete branch from Remote Repository:
+
+	git push origin --delete MyFirstBranch
+
+-----------------------------------------------------------
+
+Clonning Project from Server Repository:
+
+	Go to Destination Folder,
+	
+	git clone https://github.com/mgunwani/git-sample-project.git
+
+-----------------------------------------------------------
+
+Pull Changes from Server Repository to Clonned Project:
+
+	Go to Project Folder,
+	
+	F:\git-sample-project>git pull
+	
+------------------------------------------------------------
+
+Working fetch over pull Command:
+
+	git pull = git fetch + git diff + git merge
+	
+1. Fetch the updates from Remote Repository,
+
+	git fetch
+	
+2. Get the Difference between Remote Repository and Local Repository
+	
+	make sure you have checkeed out to master local branch,
+	
+	git diff origin/master
+	
+3. Merge difference to clonned project,
+
+	git merge
+
+
+
+
